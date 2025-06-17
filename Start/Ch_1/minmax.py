@@ -9,13 +9,14 @@ strings = ["one", "three", "five", "seven", "eleven", "eighteen"]
 
 
 # TODO: The min() function finds the minimum value
-
+print(f"The min value is: {min(values)}")
 
 # TODO: The max() function finds the maximum value
-
+print(f"The max value is: {max(values)}")
 
 # TODO: define a custom "key" function to extract a data field
-
+print(f"The shortest value is: {min(strings, key=len)}")
+print(f"The longest value is: {max(strings, key=len)}")
 
 # TODO: open the data file and load the JSON
 # with open("../../30DayQuakes.json", "r") as datafile:
