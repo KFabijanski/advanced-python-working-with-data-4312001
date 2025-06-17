@@ -19,5 +19,17 @@ print(f"The shortest value is: {min(strings, key=len)}")
 print(f"The longest value is: {max(strings, key=len)}")
 
 # TODO: open the data file and load the JSON
-# with open("../../30DayQuakes.json", "r") as datafile:
-#     data = json.load(datafile)
+with open("30DayQuakes.json", "r") as datafile:
+    data = json.load(datafile)
+
+print(data["metadata"]["title"])
+print(len(data["features"]))
+
+def getmag(dataitem):
+    magnitude = dataitem["properties"]["mag"]
+    if (magnitude is None):
+        magnitude = 0
+    return float(magnitude)
+
+print(min(data["features"], key=getmag) )
+print(min(data["features"], key=getmag) )
